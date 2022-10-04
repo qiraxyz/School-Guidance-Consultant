@@ -16,8 +16,12 @@
 <!-- partial -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'>
-</script><script src="script.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+<script src="script.js"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+<link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+
 
 </head>
 <body>
@@ -38,11 +42,11 @@
 </div>
 <div class="sidebar-header">
 <div class="user-pic">
-<img class="img-responsive img-rounded" src="pfp.png"
+<img class="img-responsive img-rounded" src="./assets/pfp.png"
 alt="">
 </div>
 <div class="user-info">
-<span class="user-name">Muh
+<span class="user-name">
 <strong>Ariq</strong>
 </span>
 <span class="user-role">Administrator</span>
@@ -72,7 +76,7 @@ alt="">
 <span>General</span>
 </li>
 <li class="sidebar-dropdown">
-<a href="index.php?">
+<a href="index.php?" class="clicked-dashboard">
 <i class="fa fa-tachometer-alt"></i>
 <span>Dashboard</span>
 <span class="badge badge-pill badge-warning">New</span>
@@ -98,11 +102,11 @@ alt="">
 
 <!-- E-commerce -->
 
-<!-- <li class="sidebar-dropdown">
+<li class="sidebar-dropdown">
 <a href="#">
 <i class="fa fa-shopping-cart"></i>
-<span>E-commerce</span>
-<span class="badge badge-pill badge-danger">3</span>
+<span>Feedback</span>
+<!-- <span class="badge badge-pill badge-danger">3</span> -->
 </a>
 <div class="sidebar-submenu">
 <ul>
@@ -118,11 +122,11 @@ alt="">
 </li>
 </ul>
 </div>
-</li> -->
+</li>
 
 <!-- Component -->
 
-<!-- <li class="sidebar-dropdown">
+<li class="sidebar-dropdown">
 <a href="#">
 <i class="far fa-gem"></i>
 <span>Components</span>
@@ -146,14 +150,14 @@ alt="">
 </li>
 </ul>
 </div>
-</li> -->
+</li>
 
 
 
 
 <!-- charts -->
 
-<!-- <li class="sidebar-dropdown">
+<li class="sidebar-dropdown">
 <a href="#">
 <i class="fa fa-chart-line"></i>
 <span>Charts</span>
@@ -174,7 +178,7 @@ alt="">
 </li>
 </ul>
 </div>
-</li> -->
+</li>
 
 
 
@@ -250,7 +254,43 @@ alt="">
 <main class="page-content">
 <div class="container-fluid">
 <h2><strong>Dashboard</strong></h2>
-<hr>
+<hr><br><br>
+                        <table class="table-dashboard">
+                                        <thead style="width: 1000px;">
+                                            <tr>
+                                                <th class="border-top-0"><h4>No</h4></th>
+                                                <th class="border-top-0"><h4>Nama Siswa</h4></th>
+                                                <th class="border-top-0"><h4>Kelas</h4></th>
+                                                <th class="border-top-0"><h4>Jurusan</h4></th>
+                                                <th class="border-top-0"><h4>Tanggal</h4></th>
+                                                <th class="border-top-0"><h4>Pesan</h4></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = "SELECT * FROM konsul ORDER BY id DESC";
+                                            $query = mysqli_query($connect,$sql);
+                                     
+                                            //take and put data with array to table
+                                            while ($sis = (mysqli_fetch_array($query))) {
+                                            
+                                            echo "<tr>";
+                                            echo "<td>". $sis [0]. "</td>";
+                                            echo "<td><h5>". $sis [1]. "</h5></td>";
+                                            echo "<td>". $sis [2]. "</td>";
+                                            echo "<td>". $sis [3]. "</td>";
+                                            echo "<td>". $sis [4]. "</td>";
+                                            echo "<td>". $sis [5]. "</td>";
+                                            // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
+                                            // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
+                                            echo "</td>";
+                                            echo "</tr>";
+                                            
+                                                              }
+                                                     ?>
+                                                     
+                                        </tbody>
+                                    </table>
 
 <!-- page-content" -->
 </div>
