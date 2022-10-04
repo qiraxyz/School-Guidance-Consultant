@@ -42,12 +42,12 @@ include 'config.php';
                 <!-- <a href="" type ="submit" name="login" value="login"><button>Login</button></a> -->
             </form>
                 <!-- dont have account -->
-                <!-- <br>
+                <br>
                 <div class="dont-login">
                 <label for="">Don’t have an account?</label>
-                <a href="regis.html">Sign Up</a>
+                <a href="regist.php">Sign Up</a>
                 </div>
-            </div> -->
+            </div>
             
         </div>
     </div>

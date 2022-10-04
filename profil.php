@@ -16,7 +16,7 @@ $sql = mysqli_query($connect, $query);
 if (mysqli_num_rows($sql) > 0) {
     $data_akun = mysqli_fetch_array($sql);
     $_SESSION["nama_user"] = $data_akun["nama_user"];
-    $_SESSION["pp"] = $data_akun["pp"];
+    $_SESSION["pp"] = $data_akun["file"];
     $_SESSION["email"] = $data_akun["email"];
     $_SESSION["status"] = $data_akun["status"];
 }
