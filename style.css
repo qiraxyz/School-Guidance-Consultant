@@ -418,6 +418,26 @@
   {
     background-color: #16c9ff25;
   }
-  .table-dashboard {
-    
+  button {
+    border: none;
+    padding: 6px 17px;
+    border-radius: 16px;
+  }
+  button:hover {
+    background-color: #464a52;
+  }
+  button:first-child {
+    background-color: #5cb85c;
+    margin-bottom: 10px;
+  }
+  button:last-child {
+    background-color: #343a40;
+    margin-bottom: 10px;
+  }
+  td button a {
+    color: white;
+  }
+  td button a:hover {
+    color: #5259657e;
+    text-decoration: none;
   }

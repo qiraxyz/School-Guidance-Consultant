@@ -1,4 +1,26 @@
-<?php include 'config.php' ?>
+<?php include 'config.php';
+
+session_start();
+// cek sudah login blm
+if ($_SESSION['status'] == "") {
+    header("localtion:index.php?status=gagal");
+}
+
+// sesion user
+$email = $_SESSION['email'];
+$query = "SELECT * FROM data_akun WHERE email = '$email'";
+$sql = mysqli_query($connect, $query);
+?>
+
+<?php
+if (mysqli_num_rows($sql) > 0) {
+    $data_akun = mysqli_fetch_array($sql);
+    $_SESSION["nama_user"] = $data_akun["nama_user"];
+    $_SESSION["pp"] = $data_akun["file"];
+    $_SESSION["email"] = $data_akun["email"];
+    $_SESSION["status"] = $data_akun["status"];
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en" >
@@ -42,12 +64,11 @@
 </div>
 <div class="sidebar-header">
 <div class="user-pic">
-<img class="img-responsive img-rounded" src="./assets/pfp.png"
-alt="">
+<img class="img-responsive img-rounded" src="<?php echo $_SESSION['pp']?>" alt="avatar">
 </div>
 <div class="user-info">
 <span class="user-name">
-<strong>Ariq</strong>
+<strong><?php echo $_SESSION['nama_user']?></strong>
 </span>
 <span class="user-role">Administrator</span>
 <span class="user-status">
@@ -255,7 +276,7 @@ alt="">
 
 <main class="page-content">
 <div class="container-fluid">
-<h2><strong>Feedback</strong></h2>
+<h2><strong>Dashboard</strong></h2>
 <hr><br><br>
                         <!-- PHP -->
 <div class="container-fluid">
