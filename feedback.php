@@ -4,11 +4,25 @@
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>CodePen - Sidebar template</title>
+<title>Dashboard Admin</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
 <link rel="stylesheet" href="style.css">
 <script src="index.js"></script>
+<!-- quicksand font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+<script src="script.js"></script>
+<!-- favicon -->
+<link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+<link rel="icon" href="./assets/favicon.png" type="image/x-icon">
+
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -28,11 +42,11 @@
 </div>
 <div class="sidebar-header">
 <div class="user-pic">
-<img class="img-responsive img-rounded" src="pfp.png"
+<img class="img-responsive img-rounded" src="./assets/pfp.png"
 alt="">
 </div>
 <div class="user-info">
-<span class="user-name">Muh
+<span class="user-name">
 <strong>Ariq</strong>
 </span>
 <span class="user-role">Administrator</span>
@@ -43,7 +57,8 @@ alt="">
 </div>
 </div>
 <!-- sidebar-header -->
-<div class="sidebar-search">
+
+<!-- <div class="sidebar-search">
 <div>
 <div class="input-group">
 <input type="text" class="form-control search-menu" placeholder="Search...">
@@ -54,15 +69,16 @@ alt="">
 </div>
 </div>
 </div>
-</div>
+</div> -->
 <!-- sidebar-search -->
+
 <div class="sidebar-menu">
 <ul>
 <li class="header-menu">
 <span>General</span>
 </li>
 <li class="sidebar-dropdown">
-<a href="#">
+<a href="index.php?">
 <i class="fa fa-tachometer-alt"></i>
 <span>Dashboard</span>
 <span class="badge badge-pill badge-warning">New</span>
@@ -88,11 +104,11 @@ alt="">
 
 <!-- E-commerce -->
 
-<!-- <li class="sidebar-dropdown">
-<a href="#">
+<li class="sidebar-dropdown">
+<a href="feedback.php" class="clicked-feedback">
 <i class="fa fa-shopping-cart"></i>
-<span>E-commerce</span>
-<span class="badge badge-pill badge-danger">3</span>
+<span>Feedback</span>
+<!-- <span class="badge badge-pill badge-danger">3</span> -->
 </a>
 <div class="sidebar-submenu">
 <ul>
@@ -108,7 +124,7 @@ alt="">
 </li>
 </ul>
 </div>
-</li> -->
+</li>
 
 <!-- Component -->
 
@@ -217,71 +233,69 @@ alt="">
 <div class="sidebar-footer">
 <a href="#">
 <i class="fa fa-bell"></i>
-<span class="badge badge-pill badge-warning notification">3</span>
+<!-- <span class="badge badge-pill badge-warning notification">3</span> -->
 </a>
 <a href="#">
 <i class="fa fa-envelope"></i>
-<span class="badge badge-pill badge-success notification">7</span>
+<!-- <span class="badge badge-pill badge-success notification">7</span> -->
 </a>
 <a href="#">
 <i class="fa fa-cog"></i>
-<span class="badge-sonar"></span>
+<!-- <span class="badge-sonar"></span> -->
 </a>
 <a href="#">
 <i class="fa fa-power-off"></i>
 </a>
 </div>
 </nav>
+
+
+
 <!-- sidebar-wrapper -->
+
 <main class="page-content">
 <div class="container-fluid">
-<h2>Pro Sidebar</h2>
-<hr>
-<div class="row">
-<div class="form-group col-md-12">
-<p>This is a responsive sidebar template with dropdown menu based on bootstrap 4 framework.</p>
-<p> You can find the complete code on <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">
-Github</a>, it contains more themes and background image option</p>
-</div>
-<div class="form-group col-md-12">
-<iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=large"
-frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=large"
-frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-</div>
-</div>
-<h5>More templates</h5>
-<hr>
-<div class="row">
-<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-<div class="card rounded-0 p-0 shadow-sm">
-<img src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png" class="card-img-top rounded-0" alt="Angular pro sidebar">
-<div class="card-body text-center">
-<h6 class="card-title">Angular Pro Sidebar</h6>
-<a href="https://github.com/azouaoui-med/angular-pro-sidebar" target="_blank" class="btn btn-primary btn-sm">Github</a>
-<a href="https://azouaoui-med.github.io/angular-pro-sidebar/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
-</div>
-</div>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-<div class="card rounded-0 p-0 shadow-sm">
-<img src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG" class="card-img-top rounded-0" alt="Angular pro sidebar">
-<div class="card-body text-center">
-<h6 class="card-title">Angular Dashboard</h6>
-<a href="https://github.com/azouaoui-med/lightning-admin-angular" target="_blank" class="btn btn-primary btn-sm">Github</a>
-<a href="https://azouaoui-med.github.io/lightning-admin-angular/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+<h2><strong>Dashboard</strong></h2>
+<hr><br><br>
+                        <table class="table-dashboard">
+                                        <thead style="width: 1000px;">
+                                            <tr>
+                                                <th class="border-top-0"><h4>No</h4></th>
+                                                <th class="border-top-0"><h4>Nama Siswa</h4></th>
+                                                <th class="border-top-0"><h4>Kelas</h4></th>
+                                                <th class="border-top-0"><h4>Jurusan</h4></th>
+                                                <th class="border-top-0"><h4>Tanggal</h4></th>
+                                                <th class="border-top-0"><h4>Pesan</h4></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = "SELECT * FROM konsul ORDER BY id DESC";
+                                            $query = mysqli_query($connect,$sql);
+                                     
+                                            //take and put data with array to table
+                                            while ($sis = (mysqli_fetch_array($query))) {
+                                            
+                                            echo "<tr>";
+                                            echo "<td>". $sis [0]. "</td>";
+                                            echo "<td><h5>". $sis [1]. "</h5></td>";
+                                            echo "<td>". $sis [2]. "</td>";
+                                            echo "<td>". $sis [3]. "</td>";
+                                            echo "<td>". $sis [4]. "</td>";
+                                            echo "<td>". $sis [5]. "</td>";
+                                            // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
+                                            // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
+                                            echo "</td>";
+                                            echo "</tr>";
+                                            
+                                                              }
+                                                     ?>
+                                                     
+                                        </tbody>
+                                    </table>
+
 <!-- page-content" -->
 </div>
 <!-- page-wrapper -->
-<!-- partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script><script src="./script.js"></script>
 </body>
 </html>
