@@ -4,7 +4,7 @@
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Admin</title>
+<title>Feedback Admin</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
 <link rel="stylesheet" href="style.css">
@@ -243,7 +243,7 @@ alt="">
 <i class="fa fa-cog"></i>
 <!-- <span class="badge-sonar"></span> -->
 </a>
-<a href="#">
+<a href="login.php">
 <i class="fa fa-power-off"></i>
 </a>
 </div>
@@ -255,7 +255,7 @@ alt="">
 
 <main class="page-content">
 <div class="container-fluid">
-<h2><strong>Dashboard</strong></h2>
+<h2><strong>Feedback</strong></h2>
 <hr><br><br>
                         <!-- PHP -->
 <div class="container-fluid">

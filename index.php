@@ -4,7 +4,7 @@
 <html lang="en" >
 <head>
 <meta charset="UTF-8">
-<title>Dashboard Admin</title>
+<title>Feedback Admin</title>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
 <link rel="stylesheet" href="style.css">
@@ -243,7 +243,7 @@ alt="">
 <i class="fa fa-cog"></i>
 <!-- <span class="badge-sonar"></span> -->
 </a>
-<a href="#">
+<a href="login.php">
 <i class="fa fa-power-off"></i>
 </a>
 </div>
@@ -255,45 +255,62 @@ alt="">
 
 <main class="page-content">
 <div class="container-fluid">
-<h2><strong>Dashboard</strong></h2>
+<h2><strong>Feedback</strong></h2>
 <hr><br><br>
-                        <table class="table-dashboard">
-                                        <thead style="width: 1000px;">
-                                            <tr>
-                                                <th class="border-top-0"><h4>No</h4></th>
-                                                <th class="border-top-0"><h4>Nama Siswa</h4></th>
-                                                <th class="border-top-0"><h4>Kelas</h4></th>
-                                                <th class="border-top-0"><h4>Jurusan</h4></th>
-                                                <th class="border-top-0"><h4>Tanggal</h4></th>
-                                                <th class="border-top-0"><h4>Pesan</h4></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            $sql = "SELECT * FROM konsul ORDER BY id DESC";
-                                            $query = mysqli_query($connect,$sql);
-                                     
-                                            //take and put data with array to table
-                                            while ($sis = (mysqli_fetch_array($query))) {
-                                            
-                                            echo "<tr>";
-                                            echo "<td>". $sis [0]. "</td>";
-                                            echo "<td><h5>". $sis [1]. "</h5></td>";
-                                            echo "<td>". $sis [2]. "</td>";
-                                            echo "<td>". $sis [3]. "</td>";
-                                            echo "<td>". $sis [4]. "</td>";
-                                            echo "<td>". $sis [5]. "</td>";
-                                            // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
-                                            // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
-                                            echo "</td>";
-                                            echo "</tr>";
-                                            
-                                                              }
-                                                     ?>
-                                                     
-                                        </tbody>
-                                    </table>
+                        <!-- PHP -->
+<div class="container-fluid">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Last Data</h4>
+                            <h6 class="card-subtitle">Data related</h6>
+                        </div>
 
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                <tr> 
+                                        <th scope="col"><b>id</b></th>
+                                        <th scope="col"><b>Nama Siswa</b></th>
+                                        <th scope="col"><b>Kelas</b></th>
+                                        <th scope="col"><b>Jurusan</b></th>
+                                        <th scope="col"><b>Tanggal</b></th>
+                                        <th scope="col"><b>Pesan</b></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                $sql = "SELECT * FROM konsul";
+                                $query = mysqli_query($connect,$sql);
+                         
+                                //take and put data with array to table
+                                while ($sis = (mysqli_fetch_array($query))) {
+                                
+                                echo "<tr>";
+                                echo "<td>". $sis [0]. "</td>";
+                                echo "<td>". $sis [1]. "</td>";
+                                echo "<td>". $sis [2]. "</td>";
+                                echo "<td>". $sis [3]. "</td>";
+                                echo "<td>". $sis [4]. "</td>";
+                                echo "<td>". $sis [5]. "</td>";
+                                // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
+                                // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
+                                echo "</td>";
+                                echo "</tr>";
+                                
+                                                  }
+                                         ?>
+                                </tbody>
+                            </table>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- PHP -->         
 <!-- page-content" -->
 </div>
 <!-- page-wrapper -->

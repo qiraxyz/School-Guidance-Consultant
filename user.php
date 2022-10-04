@@ -71,36 +71,36 @@ include 'config.php';
                 <div class="form-group">
                   <label class="control-label col-sm-2" for="nama">Name :</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name_siswa" placeholder="Enter Name" name="nama_siswa">
+                    <input type="text" required="required" class="form-control" id="name_siswa" placeholder="Enter Name" name="nama_siswa">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-sm-2" for="kelas">kelas:</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="kelas" placeholder="Enter class" name="kelas">
+                    <input type="text" required="required" class="form-control" id="kelas" placeholder="Enter class" name="kelas">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-sm-2" for="jurusan">Jurusan:</label>
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="jurusan" placeholder="Enter major" name="jurusan">
+                    <input type="text" required="required" class="form-control" id="jurusan" placeholder="Enter major" name="jurusan">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-sm-2" for="tanggal">Tanggal:</label>
                   <div class="col-sm-10">
-                    <input type="date" class="form-control" id="tanggal" placeholder="Enter date" name="tanggal">
+                    <input type="date" required="required" class="form-control" id="tanggal" placeholder="Enter date" name="tanggal">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="control-label col-sm-2" for="pesan">Message:</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" rows="5" name="pesan" value:pesan; id="pesan"></textarea>
+                    <textarea class="form-control" required="required" rows="5" name="pesan" value:pesan; id="pesan"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" name="kirim" value="kirim" class="btn btn-default">Submit</button>
+                    <button type="submit" required="required" name="kirim" value="kirim" class="btn btn-default">Submit</button>
                   </div>
                 </div>
               </form>
