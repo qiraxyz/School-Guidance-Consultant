@@ -57,7 +57,8 @@ alt="">
 </div>
 </div>
 <!-- sidebar-header -->
-<div class="sidebar-search">
+
+<!-- <div class="sidebar-search">
 <div>
 <div class="input-group">
 <input type="text" class="form-control search-menu" placeholder="Search...">
@@ -68,8 +69,9 @@ alt="">
 </div>
 </div>
 </div>
-</div>
+</div> -->
 <!-- sidebar-search -->
+
 <div class="sidebar-menu">
 <ul>
 <li class="header-menu">
@@ -103,7 +105,7 @@ alt="">
 <!-- E-commerce -->
 
 <li class="sidebar-dropdown">
-<a href="#">
+<a href="feedback.php">
 <i class="fa fa-shopping-cart"></i>
 <span>Feedback</span>
 <!-- <span class="badge badge-pill badge-danger">3</span> -->
@@ -126,7 +128,7 @@ alt="">
 
 <!-- Component -->
 
-<li class="sidebar-dropdown">
+<!-- <li class="sidebar-dropdown">
 <a href="#">
 <i class="far fa-gem"></i>
 <span>Components</span>
@@ -150,14 +152,14 @@ alt="">
 </li>
 </ul>
 </div>
-</li>
+</li> -->
 
 
 
 
 <!-- charts -->
 
-<li class="sidebar-dropdown">
+<!-- <li class="sidebar-dropdown">
 <a href="#">
 <i class="fa fa-chart-line"></i>
 <span>Charts</span>
@@ -178,7 +180,7 @@ alt="">
 </li>
 </ul>
 </div>
-</li>
+</li> -->
 
 
 

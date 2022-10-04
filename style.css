@@ -413,7 +413,9 @@
     font-family: 'Quicksand', sans-serif;
     color: black;
   }
-  .clicked-dashboard {
+  .clicked-dashboard,
+  .clicked-feedback
+  {
     background-color: #16c9ff25;
   }
   .table-dashboard {
