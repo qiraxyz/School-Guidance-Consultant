@@ -6,9 +6,10 @@ if(isset($_POST['kirim'])) {
     $kelas = $_POST['kelas'];
     $jurusan = $_POST['jurusan'];
     $tanggal = $_POST['tanggal'];
+    $no = $_POST['no'];
     $pesan = $_POST['pesan'];
 
-    $sql = "INSERT INTO konsul (nama_siswa, kelas, jurusan, tanggal, pesan) VALUES ('$nama_siswa','$kelas','$jurusan','$tanggal','$pesan')";
+    $sql = "INSERT INTO konsul (nama_siswa, kelas, jurusan, tanggal, no,pesan) VALUES ('$nama_siswa','$kelas','$jurusan','$tanggal','$no','$pesan')";
     $query = mysqli_query($connect, $sql);
 
     if($query){
