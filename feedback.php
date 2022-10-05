@@ -317,7 +317,8 @@ if (mysqli_num_rows($sql) > 0) {
                                 echo "<td>". $sis [3]. "</td>";
                                 echo "<td>". $sis [4]. "</td>";
                                 echo "<td>". $sis [5]. "</td>";
-                                echo "<td>". "<button>". "<a href='editform_siswa.php?id=".$sis['0']."'>Balas</a>" . "</button>";
+                                echo "<td>". $sis [6]. "</td>";
+                                echo "<td>". "<button>". "<a href='formchat.php?no=".$sis['5']."'>Balas</a>" . "</button>";
                                 echo "<button>". "<a href='hapus.php?id=".$sis['0']."'>delete</a>". "</button>"; 
                                 echo "</td>";
                                 echo "</tr>";
