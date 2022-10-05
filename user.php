@@ -93,6 +93,12 @@ include 'config.php';
                   </div>
                 </div>
                 <div class="form-group">
+                  <label class="control-label col-sm-2" for="tanggal">No:</label>
+                  <div class="col-sm-10">
+                    <input type="number" required="required" class="form-control" id="no" placeholder="Enter number : 62" name="no">
+                  </div>
+                </div>
+                <div class="form-group">
                   <label class="control-label col-sm-2" for="pesan">Message:</label>
                   <div class="col-sm-10">
                     <textarea class="form-control" required="required" rows="5" name="pesan" value:pesan; id="pesan"></textarea>
