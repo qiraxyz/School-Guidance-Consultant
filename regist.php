@@ -1,5 +1,11 @@
 <?php
 include 'config.php';
+session_start();
+if(isset($_SESSION['email'])){
+    header("Location: user2.php");
+}elseif(isset($_SESSION['email']) == 'ara123@gmail.com'){
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,13 +47,13 @@ include 'config.php';
                     <input type="password" name="password" placeholder="Password"> 
                     <br>
                     <input type="file" name="file">
-                    <button type="submit" name="simpanakun" >Sign Up</button>
+                    <button type="submit" name="simpanakun" style=" margin-left: 23%; background-color: #083AA9; border: none; border-radius: 10px; color: white; width: 150px; height: 35px; font-weight: bold;">Sign Up</button>
 
                     <!-- dont have account -->
                     <br>
                     <div class="have-account">
                     <label for="">have account?</label>
-                    <a href="login.php">Sign In</a>
+                    <a href="login.php" style="color: green;">Sign In</a>
                     </div>
                 </div>
             </form>    
