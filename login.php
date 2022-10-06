@@ -1,6 +1,12 @@
 <?php
 session_start();
 include 'config.php';
+
+if(isset($_SESSION['email'])){
+    header("Location: user2.php");
+}elseif(isset($_SESSION['email']) == 'ara123@gmail.com'){
+    header("Location: index.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -68,11 +74,13 @@ include 'config.php';
         }else if ($r ['status']=='user'){
             $_SESSION['email']= $email;
             $_SESSION['status']= 'user';
-            header('location: profil.php');
+            header('location: user2.php');
         }else{
             header("location:login.php?pesan=gagal");
         }
+
     }
+
     ?>
 </body>
 

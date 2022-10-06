@@ -1,25 +1,33 @@
 <?php
 include 'config.php';
 session_start();
-// cek sudah login blm
-if ($_SESSION['status'] == "") {
-    header("localtion:index.php?status=gagal");
-}
 
-// sesion user
-$email = $_SESSION['email'];
-$query = "SELECT * FROM data_akun WHERE email = '$email'";
-$sql = mysqli_query($connect, $query);
+// cek sudah login blm
+// if (!isset($_SESSION['status'])) {
+  //     header("localtion:index.php?status=gagal");
+  // }
+  
+  // sesion user
+  $email = $_SESSION['email'];
+  $query = "SELECT * FROM data_akun WHERE email = '$email'";
+  $sql = mysqli_query($connect, $query);
+  //cek admin
+  // session_start();
+  
+  if(!isset($_SESSION['email'])){
+    header("Location: user.php");
+  }
 ?>
 
 <?php
 if (mysqli_num_rows($sql) > 0) {
-    $data_akun = mysqli_fetch_array($sql);
-    $_SESSION["nama_user"] = $data_akun["nama_user"];
-    $_SESSION["pp"] = $data_akun["file"];
-    $_SESSION["email"] = $data_akun["email"];
-    $_SESSION["status"] = $data_akun["status"];
+  $data_akun = mysqli_fetch_array($sql);
+  $_SESSION["nama_user"] = $data_akun["nama_user"];
+  $_SESSION["pp"] = $data_akun["file"];
+  $_SESSION["email"] = $data_akun["email"];
+  $_SESSION["status"] = $data_akun["status"];
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +48,7 @@ if (mysqli_num_rows($sql) > 0) {
         <div class="border-end bg-white" id="sidebar-wrapper">
             <div class="sidebar-heading border-bottom bg-light">Starbhak BK</div>
             <div class="list-group list-group-flush">
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="user.php">konsultasi</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="user2.php">konsultasi</a>
                 <a class="list-group-item list-group-item-action list-group-item-light p-3" href="profil.php">Profil</a>
                 <!--<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
@@ -62,8 +70,8 @@ if (mysqli_num_rows($sql) > 0) {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="login.php">login</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
+                                    <!-- <a class="dropdown-item" href="login.php">login</a> -->
+                                    <a class="dropdown-item" href="logout.php">Logout</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#!">Something else here</a>
                                 </div>
@@ -83,10 +91,7 @@ if (mysqli_num_rows($sql) > 0) {
                                 <h5 class="my-3"><?php echo $_SESSION['nama_user'] ?></h5>
                                 <p class="text-muted mb-1">Full NGEstuck</p>
                                 <p class="text-muted mb-4">Bay Area, Depok, ID</p>
-                                <div class="d-flex justify-content-center mb-2">
-                                    <button type="button" class="btn btn-primary">Update</button>
-                                    <!-- <button type="button" class="btn btn-outline-primary ms-1"></button> -->
-                                </div>
+                               
                             </div>
                         </div>
                     </div>

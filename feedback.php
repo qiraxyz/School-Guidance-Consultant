@@ -298,6 +298,7 @@ if (mysqli_num_rows($sql) > 0) {
                                         <th scope="col"><b>Kelas</b></th>
                                         <th scope="col"><b>Jurusan</b></th>
                                         <th scope="col"><b>Tanggal</b></th>
+                                        <th scope="col"><b>No</b></th>
                                         <th scope="col"><b>Pesan</b></th>
 
                                     </tr>

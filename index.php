@@ -2,8 +2,8 @@
 
 session_start();
 // cek sudah login blm
-if ($_SESSION['status'] == "") {
-    header("localtion:index.php?status=gagal");
+if($_SESSION['email'] != 'ara123@gmail.com'){
+    header('Location: user2.php');
 }
 
 // sesion user
@@ -264,7 +264,7 @@ if (mysqli_num_rows($sql) > 0) {
 <i class="fa fa-cog"></i>
 <!-- <span class="badge-sonar"></span> -->
 </a>
-<a href="login.php">
+<a href="logout.php">
 <i class="fa fa-power-off"></i>
 </a>
 </div>
@@ -297,8 +297,8 @@ if (mysqli_num_rows($sql) > 0) {
                                         <th scope="col"><b>Kelas</b></th>
                                         <th scope="col"><b>Jurusan</b></th>
                                         <th scope="col"><b>Tanggal</b></th>
-                                        <th scope="col"><b>Pesan</b></th>
-
+                                        <th scope="col"><b>No</b></th>
+                                        <!-- <th scope="col"><b>Pesan</b></th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -316,6 +316,7 @@ if (mysqli_num_rows($sql) > 0) {
                                 echo "<td>". $sis [3]. "</td>";
                                 echo "<td>". $sis [4]. "</td>";
                                 echo "<td>". $sis [5]. "</td>";
+                                // echo "<td>". $sis [6]. "</td>";
                                 // echo "<td>". "<button>". "<a href='editform_siswa.php?id_siswa=".$sis['id_siswa']."'>edit</a>" . "</button>";
                                 // echo "<button>". "<a href='hapus_siswa.php?id_siswa=".$sis['id_siswa']."'>delete</a>". "</button>"; 
                                 echo "</td>";
